@@ -12,7 +12,7 @@ class ChainedList:
 
     def insert_node_after(self, data, new_node):
         """
-        insert a new node after the node with the value == data
+        insert a new node after the node with the value ==data
         Parameters
         ----------
         data : searched data
@@ -25,6 +25,6 @@ class ChainedList:
         delete all node(s) value == data
         Parameters
         ----------
-        data : searched data to delete
+        data : searched datas to delete
         """
         pass
