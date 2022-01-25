@@ -13,13 +13,13 @@ class ChainedList():
     """
     def __init__(self):
         self.first_node = None
-        
+
     def __iter__(self):     #make the list iterable
         node = self.first_node
         while node is not None:
             yield node
-            node = node.link     
-             
+            node = node.link
+
     def insert_node_beginning(self, new_node):
         """
         insert a new node at the beginning of the chained list.
@@ -30,8 +30,7 @@ class ChainedList():
         new_node = Node(new_node)
         new_node.link = self.first_node
         self.first_node = new_node
-        
-        
+
 
     def insert_node_end(self, new_node):
         """
@@ -40,19 +39,19 @@ class ChainedList():
         ----------
         new_node : node to insert at the end of the list
         """
-        
-        newNode = Node(new_node)
-        if(self.first_node == None):
-          self.first_node = newNode
-          return
+
+        newnode = Node(new_node)
+        if self.first_node is None :
+            self.first_node = newnode
+            return
         else:
-          temp = self.first_node
-          while(temp.link != None):
-            temp = temp.link
-          temp.link = newNode
-        
-        
-    def insertBefore(self, data, new_node):
+            temp = self.first_node
+            while temp.link is not None :
+                temp = temp.link
+            temp.link = newnode
+
+
+    def insert_before(self, data, new_node):
         """
         insert a new node before the node with the value ==data
         Parameters
@@ -64,13 +63,13 @@ class ChainedList():
         value.link = self.first_node
 
         node = self.first_node
-        if node == None:
+        if node is None:
             print ('No nodes to insert before!')
         else:
             found = False
                 # search nodes
             while node:
-                if node.link == None:
+                if node.link is None:
                     break
                 if node.link.data == data:
                     found = True
@@ -79,11 +78,11 @@ class ChainedList():
                     break
                 else:
                     node = node.link
-            if found != True:
+            if found is not True:
                 print ('Your target node of {} was not found in the list!'.format(data))
- 
-        
-    def insertAfter(self, data, new_node):
+
+
+    def insert_after(self, data, new_node):
         """
         insert a new node after the node with the value ==data
         Parameters
@@ -91,21 +90,21 @@ class ChainedList():
         data : searched data
         new_node : node to insert
         """
-        n = self.first_node
-        while n is not None:
-            if n.data == data:
+        node = self.first_node
+        while node is not None:
+            if node.data == data:
                 break
-            n = n.link
-        if n is None:
-            print("Data not in the list")
+            node = node.link
+        if node is None:
+            print ('Your target node of {} was not found in the list!'.format(data))
         else:
             new_node = Node(new_node)
-            new_node.link = n.link
-            n.link = new_node
-    
-    
-    def sortedInsert(self, new_node):
-        
+            new_node.link = node.link
+            node.link = new_node
+
+
+    def sorted_insert(self, new_node):
+
         """
         insert a new node in a sorted increasing way as it'll be inserted
         just before the FIRST existing node that has a bigger value
@@ -116,25 +115,24 @@ class ChainedList():
         """
         current = None
         new_node=Node(new_node)
-        if (self.first_node == None or (self.first_node.data >= new_node.data)):
-     
+        if (self.first_node is None or (self.first_node.data >= new_node.data)):
+
             new_node.link = self.first_node
             self.first_node = new_node
-     
+
         else:
-     
+
             # Locate the node before the point of insertion
             current = self.first_node
-            while (current.link != None and current.link.data < new_node.data):
-         
+            while (current.link is not None and current.link.data < new_node.data):
+
                 current = current.link
             new_node.link = current.link
             current.link = new_node
-         
+
         return self.first_node
 
 
-    
     def delete_node(self,data):
         """
         delete the first occurrence of value in linked list
@@ -144,26 +142,25 @@ class ChainedList():
         """
         temp = self.first_node
         if temp is not None:
-            if temp.data == data: 
+            if temp.data == data:
                 self.first_node = temp.link
                 temp = None
                 return
- 
+
         while temp is not None:
             if temp.data == data:
                 break
             prev = temp
             temp = temp.link
-        
-        if temp is None:
-            print("Warning: a node can't be deleted here!")
-            return
- 
-        prev.link = temp.link
-        
-    
 
-    def printList(self) :
+        if temp is None:
+            print("Warning: can't delete node(s)!")
+            return
+
+        prev.link = temp.link
+
+
+    def print_list(self) :
         """
         prints chained list
         """
@@ -173,14 +170,3 @@ class ChainedList():
             print("Chained list is empty!")
         else :
             print (temp.data)
-        
-
-
-
-
-
-
-
-
-
-
