@@ -1,7 +1,8 @@
 # coding: utf-8
 
-from node import Node
+__author__ = 'Aimen CHERIF'
 
+from node import Node
 
 class ChainedList():
     """
@@ -154,7 +155,7 @@ class ChainedList():
             temp = temp.link
 
         if temp is None:
-            print("Warning: can't delete node(s)!")
+            print("Warning: no target node found at a certain position/empty list!")
             return
 
         prev.link = temp.link

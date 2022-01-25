@@ -1,5 +1,7 @@
 # coding: utf-8
 
+__author__ = 'Aimen CHERIF'
+
 from random import randrange
 from chainedList import ChainedList
 

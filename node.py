@@ -1,4 +1,7 @@
 # coding: utf-8
+
+__author__ = 'Aimen CHERIF'
+
 class Node:
     def __init__(self, param_data):
         self.data = param_data
