@@ -5,7 +5,7 @@ README
 
 **Mode d'emploi**
 <br>
-Créer une liste chainnée, avec les objets node et un objet liste chainée.    
+Créer une liste chainée, avec les objets node et un objet liste chainée.    
 
 
 **Code**
