@@ -25,4 +25,4 @@ La liste étant itérable, on peut lui déléter la premiére occurrence d'une v
 Le deuxiéme exemple consiste en une deuxième liste chainée construite à partir de nombres <b>aléatoires</b> qui sont triés automatiquement
 par ordre croissant.
 
-N'hésitez pas à essayer toutes les fonctionnalités. A vous de jouer! :)
+N'hésitez pas à essayer toutes les fonctionnalités dans le code pour construire votre propre liste chainée. A vous de jouer! :)
