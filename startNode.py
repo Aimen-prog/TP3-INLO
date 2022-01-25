@@ -46,7 +46,7 @@ if __name__=='__main__':
         chained_list.delete_node(50)
 
     #print this first chained list to check:
-    print("\nThis is a first test chained list : ")
+    print("\nThis is an example of a manually-made chained list proposed by us: ")
     chained_list.print_list()
 
     ######Create a second chained list sorted from random numbers#####
@@ -57,5 +57,5 @@ if __name__=='__main__':
 
     for i in range(5) : #chained list of length 5
         second_chained_list.sorted_insert(randrange(1000)) #random values between 0 and 1000
-    print("\nThis is a sorted chained list with random values example : ")
+    print("\nThis is a sorted chained list with random values: ")
     second_chained_list.print_list()
