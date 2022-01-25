@@ -6,8 +6,8 @@ class Node:
 
     def __str__(self):
         liste = []
-        node = self 
-        while node.link != None:
+        node = self
+        while node.link is not None:
             liste.append(node.data)
             node = node.link
         liste.append(node.data)
